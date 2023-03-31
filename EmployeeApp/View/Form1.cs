@@ -19,6 +19,7 @@ namespace EmployeeApp.View
             InitializeComponent();
         }
 
+
         public event Action<String> getDob;
         public event Action<String> getSalary;
         public event Action<String> getJob;
@@ -29,11 +30,52 @@ namespace EmployeeApp.View
         public event Action<String> getName;
         public event Action<String> getLastName;
 
-        
+
+        public TextBox GetNameBox()
+        {
+            return nameBox;
+        }
+
+        public TextBox GetLastNameBox()
+        {
+            return lastNameBox;
+        }
+
+        public DateTimePicker GetDateBox()
+        {
+            return dateBox;
+        }
+
+        public NumericUpDown GetSalaryBox()
+        {
+            return salaryBox;
+        }
+
+        public ComboBox GetJobBox()
+        {
+            return jobBox;
+        }
+
+        public ListBox GetListBox()
+        {
+            return listBox1;
+        }
+
+        public void ClearErrorProviderForField(Control field)
+        {
+            errorProvider1.SetError(field, ""); // ustawienie pustego komunikatu błędu usuwa ErrorProvider
+        }
+
+        public void SetErrorProviderOnField(string errorMessage, Control control)
+        {
+            errorProvider1.SetError(control, errorMessage);
+        }
+
+
 
         private void get_DoB(object sender, EventArgs e)
         {
-            getDob?.Invoke(dateBox.Value.ToString());
+            getDob?.Invoke(dateBox.Text);
         }
 
         private void get_salary(object sender, EventArgs e)
@@ -75,8 +117,9 @@ namespace EmployeeApp.View
         private void get_Nazwisko(object sender, EventArgs e)
         {
             getLastName?.Invoke(lastNameBox.Text);
+            
         }
-
+        
 
     }
 }

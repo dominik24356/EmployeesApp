@@ -8,12 +8,19 @@ namespace EmployeeApp.Model
 {
     class MainModel
     {
-        public MainModel()
+        private EmployeeBuilder _employeeBuilder;
+
+        public EmployeeBuilder EmployeeBuilder
         {
-            // stuff
+            set { _employeeBuilder = value; }
+            get { return _employeeBuilder; }
         }
 
-        public
+        public MainModel()
+        {
+            _employeeBuilder = new EmployeeBuilder();
+        }
+
 
     }
 }

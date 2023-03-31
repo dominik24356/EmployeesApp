@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.jobTypeBox3 = new System.Windows.Forms.RadioButton();
@@ -47,8 +48,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salaryBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -92,7 +95,6 @@
             this.jobTypeBox3.Name = "jobTypeBox3";
             this.jobTypeBox3.Size = new System.Drawing.Size(139, 24);
             this.jobTypeBox3.TabIndex = 14;
-            this.jobTypeBox3.TabStop = true;
             this.jobTypeBox3.Text = "Umowa zlecenie";
             this.jobTypeBox3.UseVisualStyleBackColor = true;
             this.jobTypeBox3.CheckedChanged += new System.EventHandler(this.get_jobType);
@@ -104,7 +106,6 @@
             this.jobTypeBox2.Name = "jobTypeBox2";
             this.jobTypeBox2.Size = new System.Drawing.Size(200, 24);
             this.jobTypeBox2.TabIndex = 13;
-            this.jobTypeBox2.TabStop = true;
             this.jobTypeBox2.Text = "Umowa na czas okreśłony";
             this.jobTypeBox2.UseVisualStyleBackColor = true;
             this.jobTypeBox2.CheckedChanged += new System.EventHandler(this.get_jobType);
@@ -112,6 +113,7 @@
             // jobTypeBox
             // 
             this.jobTypeBox.AutoSize = true;
+            this.jobTypeBox.Checked = true;
             this.jobTypeBox.Location = new System.Drawing.Point(123, 323);
             this.jobTypeBox.Name = "jobTypeBox";
             this.jobTypeBox.Size = new System.Drawing.Size(220, 24);
@@ -141,7 +143,17 @@
             // 
             // jobBox
             // 
+            this.jobBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.jobBox.FormattingEnabled = true;
+            this.jobBox.Items.AddRange(new object[] {
+            "Programista",
+            "Elektryk",
+            "Administrator",
+            "Prawnik",
+            "Lekarz",
+            "Sprzątacz",
+            "Kelner",
+            "Artysta"});
             this.jobBox.Location = new System.Drawing.Point(122, 267);
             this.jobBox.Name = "jobBox";
             this.jobBox.Size = new System.Drawing.Size(251, 28);
@@ -159,7 +171,17 @@
             // 
             // salaryBox
             // 
+            this.salaryBox.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             this.salaryBox.Location = new System.Drawing.Point(123, 218);
+            this.salaryBox.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.salaryBox.Name = "salaryBox";
             this.salaryBox.Size = new System.Drawing.Size(250, 27);
             this.salaryBox.TabIndex = 7;
@@ -176,6 +198,8 @@
             // 
             // dateBox
             // 
+            this.dateBox.CustomFormat = "yyyy.MM.dd";
+            this.dateBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateBox.Location = new System.Drawing.Point(123, 165);
             this.dateBox.Name = "dateBox";
             this.dateBox.Size = new System.Drawing.Size(250, 27);
@@ -242,14 +266,18 @@
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(419, 22);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(497, 524);
+            this.listBox1.Size = new System.Drawing.Size(724, 524);
             this.listBox1.TabIndex = 18;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 570);
+            this.ClientSize = new System.Drawing.Size(1155, 570);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -259,6 +287,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salaryBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -284,5 +313,6 @@
         private Button button2;
         private Button button3;
         private ListBox listBox1;
+        private ErrorProvider errorProvider1;
     }
 }
