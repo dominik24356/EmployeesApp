@@ -17,22 +17,47 @@ namespace EmployeeApp.View
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void get_DoB(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void get_salary(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void get_job(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void get_jobType(object sender, EventArgs e)
+        {
+
+        }
+
+        private void save(object sender, EventArgs e)
+        {
+
+        }
+
+        private void load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void add(object sender, EventArgs e)
+        {
+
+        }
+
+        private void get_Imie(object sender, EventArgs e)
+        {
+
+        }
+
+        private void get_Nazwisko(object sender, EventArgs e)
         {
 
         }

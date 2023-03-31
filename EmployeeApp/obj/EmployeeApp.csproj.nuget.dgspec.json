@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projekty C#\\EmployeeApp\\EmployeeApp\\EmployeeApp\\EmployeeApp.csproj": {}
+    "D:\\Projekty C#\\EmployeeApp\\EmployeeApp\\EmployeeApp.csproj": {}
   },
   "projects": {
-    "D:\\Projekty C#\\EmployeeApp\\EmployeeApp\\EmployeeApp\\EmployeeApp.csproj": {
+    "D:\\Projekty C#\\EmployeeApp\\EmployeeApp\\EmployeeApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekty C#\\EmployeeApp\\EmployeeApp\\EmployeeApp\\EmployeeApp.csproj",
+        "projectUniqueName": "D:\\Projekty C#\\EmployeeApp\\EmployeeApp\\EmployeeApp.csproj",
         "projectName": "EmployeeApp",
-        "projectPath": "D:\\Projekty C#\\EmployeeApp\\EmployeeApp\\EmployeeApp\\EmployeeApp.csproj",
+        "projectPath": "D:\\Projekty C#\\EmployeeApp\\EmployeeApp\\EmployeeApp.csproj",
         "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekty C#\\EmployeeApp\\EmployeeApp\\EmployeeApp\\obj\\",
+        "outputPath": "D:\\Projekty C#\\EmployeeApp\\EmployeeApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",

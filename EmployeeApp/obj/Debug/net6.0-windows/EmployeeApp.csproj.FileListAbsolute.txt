@@ -1,0 +1,17 @@
+D:\Projekty C#\EmployeeApp\EmployeeApp\bin\Debug\net6.0-windows\EmployeeApp.exe
+D:\Projekty C#\EmployeeApp\EmployeeApp\bin\Debug\net6.0-windows\EmployeeApp.deps.json
+D:\Projekty C#\EmployeeApp\EmployeeApp\bin\Debug\net6.0-windows\EmployeeApp.runtimeconfig.json
+D:\Projekty C#\EmployeeApp\EmployeeApp\bin\Debug\net6.0-windows\EmployeeApp.dll
+D:\Projekty C#\EmployeeApp\EmployeeApp\bin\Debug\net6.0-windows\EmployeeApp.pdb
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\EmployeeApp.csproj.AssemblyReference.cache
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\EmployeeApp.View.Form1.resources
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\EmployeeApp.csproj.GenerateResource.cache
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\EmployeeApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\EmployeeApp.AssemblyInfoInputs.cache
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\EmployeeApp.AssemblyInfo.cs
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\EmployeeApp.csproj.CoreCompileInputs.cache
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\EmployeeApp.dll
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\refint\EmployeeApp.dll
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\EmployeeApp.pdb
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\EmployeeApp.genruntimeconfig.cache
+D:\Projekty C#\EmployeeApp\EmployeeApp\obj\Debug\net6.0-windows\ref\EmployeeApp.dll
