@@ -40,9 +40,9 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lastNameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nameBox = new System.Windows.Forms.TextBox();
             this.Imie = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -64,9 +64,9 @@
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.lastNameBox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.nameBox);
             this.groupBox1.Controls.Add(this.Imie);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -182,13 +182,13 @@
             this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.get_DoB);
             // 
-            // textBox3
+            // lastNameBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 27);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.Click += new System.EventHandler(this.get_Nazwisko);
+            this.lastNameBox.Location = new System.Drawing.Point(123, 114);
+            this.lastNameBox.Name = "lastNameBox";
+            this.lastNameBox.Size = new System.Drawing.Size(250, 27);
+            this.lastNameBox.TabIndex = 4;
+            this.lastNameBox.Click += new System.EventHandler(this.get_Nazwisko);
             // 
             // label1
             // 
@@ -199,13 +199,13 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Nazwisko";
             // 
-            // textBox1
+            // nameBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 27);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Click += new System.EventHandler(this.get_Imie);
+            this.nameBox.Location = new System.Drawing.Point(123, 56);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(250, 27);
+            this.nameBox.TabIndex = 1;
+            this.nameBox.Click += new System.EventHandler(this.get_Imie);
             // 
             // Imie
             // 
@@ -249,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 575);
+            this.ClientSize = new System.Drawing.Size(928, 570);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -266,9 +266,9 @@
         #endregion
 
         private GroupBox groupBox1;
-        private TextBox textBox1;
+        private TextBox nameBox;
         private Label Imie;
-        private TextBox textBox3;
+        private TextBox lastNameBox;
         private Label label1;
         private Button button1;
         private RadioButton radioButton3;
