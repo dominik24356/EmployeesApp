@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeApp.Model
 {
-    class MainModel
+    internal class Employee
     {
-        public MainModel()
-        {
-            // stuff
-        }
-
-        public
-
     }
 }

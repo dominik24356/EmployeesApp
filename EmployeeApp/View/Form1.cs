@@ -13,8 +13,14 @@ namespace EmployeeApp.View
     public partial class Form1 : Form
     {
 
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
         public event Action<String> getDob;
-        public event Action<int> getSalary;
+        public event Action<String> getSalary;
         public event Action<String> getJob;
         public event Action<String> getJobType;
         public event Action saveEmployee;
@@ -23,31 +29,27 @@ namespace EmployeeApp.View
         public event Action<String> getName;
         public event Action<String> getLastName;
 
-
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        
 
         private void get_DoB(object sender, EventArgs e)
         {
-            
-            getDob?.Invoke();
+            getDob?.Invoke(dateBox.Value.ToString());
         }
 
         private void get_salary(object sender, EventArgs e)
         {
-            getSalary?.Invoke();
+            getSalary?.Invoke(salaryBox.Value.ToString());
         }
 
         private void get_job(object sender, EventArgs e)
         {
-            getJob?.Invoke();
+            getJob?.Invoke(jobBox.Text);
         }
 
         private void get_jobType(object sender, EventArgs e)
         {
-            getJob?.Invoke();
+            var radioButton = sender as RadioButton;
+            getJobType?.Invoke(radioButton.Text);
         }
 
         private void save(object sender, EventArgs e)
@@ -67,14 +69,14 @@ namespace EmployeeApp.View
 
         private void get_Imie(object sender, EventArgs e)
         {
-            getName?.Invoke(lastNameBox.Text);
+            getName?.Invoke(nameBox.Text);
         }
 
         private void get_Nazwisko(object sender, EventArgs e)
         {
-            getLastName?.Invoke(nameBox.Text); 
+            getLastName?.Invoke(lastNameBox.Text);
         }
 
-        
+
     }
 }
