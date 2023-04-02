@@ -31,7 +31,7 @@ namespace EmployeeApp.Presenter
 
         private void _view_getLastName(string lastName)
         {
-            _model.EmployeeBuilder.LastName = lastName;
+            _model.Employee.LastName = lastName;
             if (string.IsNullOrEmpty(lastName))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetLastNameBox());
@@ -45,7 +45,7 @@ namespace EmployeeApp.Presenter
 
         private void _view_getName(string name)
         {
-            _model.EmployeeBuilder.Name = name;
+            _model.Employee.Name = name;
             if (string.IsNullOrEmpty(name))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetNameBox());
@@ -59,12 +59,12 @@ namespace EmployeeApp.Presenter
 
         private void _view_getJobType(string jobType)
         {
-            _model.EmployeeBuilder.JobType = jobType;
+            _model.Employee.JobType = jobType;
         }
 
         private void _view_getJob(string job)
         {
-            _model.EmployeeBuilder.Job = job;
+            _model.Employee.Job = job;
 
             if (string.IsNullOrEmpty(job))
             {
@@ -80,7 +80,7 @@ namespace EmployeeApp.Presenter
         private void _view_getSalary(string salary)
         {
 
-            _model.EmployeeBuilder.Salary = salary;
+            _model.Employee.Salary = salary;
 
             if (string.IsNullOrEmpty(salary))
             {
@@ -97,7 +97,7 @@ namespace EmployeeApp.Presenter
         private void _view_getDob(string date)
         {
 
-            _model.EmployeeBuilder.Date = date;
+            _model.Employee.Date = date;
 
             if (string.IsNullOrEmpty(date))
             {
@@ -114,32 +114,32 @@ namespace EmployeeApp.Presenter
         private void _view_addEmployee()
         {
             bool isError = false;
-            if (String.IsNullOrEmpty(_model.EmployeeBuilder.Name) || _model.EmployeeBuilder.Name.Equals(""))
+            if (String.IsNullOrEmpty(_model.Employee.Name) || _model.Employee.Name.Equals(""))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetNameBox());
                 isError = true;
 
             }
 
-            if (String.IsNullOrEmpty(_model.EmployeeBuilder.LastName))
+            if (String.IsNullOrEmpty(_model.Employee.LastName))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetLastNameBox());
                 isError = true;
             }
 
-            if (String.IsNullOrEmpty(_model.EmployeeBuilder.Date))
+            if (String.IsNullOrEmpty(_model.Employee.Date))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetDateBox());
                 isError = true;
             }
 
-            if (_model.EmployeeBuilder.Salary is null)
+            if (_model.Employee.Salary is null || _model.Employee.Salary.Equals("0"))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetSalaryBox());
                 isError = true;
             }
 
-            if (String.IsNullOrEmpty(_model.EmployeeBuilder.Job))
+            if (String.IsNullOrEmpty(_model.Employee.Job))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetJobBox());
                 isError = true;
@@ -149,19 +149,30 @@ namespace EmployeeApp.Presenter
 
             if (!isError)
             {
-                _view.GetListBox().Items.Add(_model.EmployeeBuilder.EmployeeAsText());
+                _view.GetListBox().Items.Add(_model.Employee.ToString());
+                _model.addEmployee();
                 
             }
         }
 
         private void _view_loadEmployee()
         {
-            //
+            _model.DeserializeEmployees();
+
+            ListBox listBox = _view.GetListBox();
+
+            // Wyczyszczenie ListBox'a przed dodaniem nowych elementów
+            listBox.Items.Clear();
+
+            foreach (Model.Employee employee in _model.Employees)
+            {
+                listBox.Items.Add(employee.ToString());
+            }
         }
 
         private void _view_saveEmployee()
         {
-            //
+            _model.SerializeEmployees();
         }
 
         

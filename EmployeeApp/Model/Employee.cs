@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace EmployeeApp.Model
 {
-    class EmployeeBuilder
+    [Serializable()]
+    public class Employee
     {
         public string Name { get; set; } = null;
         public string LastName { get; set; } = null;
@@ -15,11 +16,11 @@ namespace EmployeeApp.Model
         public string Job { get; set; } = null;
         public string JobType { get; set; } = null;
 
-        public EmployeeBuilder() { }
+        public Employee() { }
 
        
-
-        public String EmployeeAsText()
+        override
+        public String ToString()
         {
             return $"{Name}, {LastName}," +
                 $" {Date}, {Salary}, {Job}, {JobType}";
