@@ -1,125 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfEmployee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Employee>
-    <Name>eee</Name>
-    <LastName>eeee</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>300</Salary>
-    <Job>Prawnik</Job>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
     <JobType>Umowa na czas okreśłony</JobType>
   </Employee>
   <Employee>
-    <Name>eee</Name>
-    <LastName>eeee</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>300</Salary>
-    <Job>Prawnik</Job>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
     <JobType>Umowa na czas okreśłony</JobType>
   </Employee>
   <Employee>
-    <Name>eee</Name>
-    <LastName>eeee</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>300</Salary>
-    <Job>Prawnik</Job>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
     <JobType>Umowa na czas okreśłony</JobType>
   </Employee>
   <Employee>
-    <Name>eee</Name>
-    <LastName>eeee</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>300</Salary>
-    <Job>Prawnik</Job>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
     <JobType>Umowa na czas okreśłony</JobType>
   </Employee>
   <Employee>
-    <Name>eee</Name>
-    <LastName>eeee</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>300</Salary>
-    <Job>Prawnik</Job>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
     <JobType>Umowa na czas okreśłony</JobType>
   </Employee>
   <Employee>
-    <Name>eee</Name>
-    <LastName>eeee</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>300</Salary>
-    <Job>Prawnik</Job>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
     <JobType>Umowa na czas okreśłony</JobType>
   </Employee>
   <Employee>
-    <Name>eee</Name>
-    <LastName>eeee</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>300</Salary>
-    <Job>Prawnik</Job>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
     <JobType>Umowa na czas okreśłony</JobType>
   </Employee>
   <Employee>
-    <Name>eee</Name>
-    <LastName>eeee</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>300</Salary>
-    <Job>Prawnik</Job>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
     <JobType>Umowa na czas okreśłony</JobType>
   </Employee>
   <Employee>
-    <Name>eee</Name>
-    <LastName>eeee</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>300</Salary>
-    <Job>Prawnik</Job>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
     <JobType>Umowa na czas okreśłony</JobType>
   </Employee>
   <Employee>
-    <Name>eee</Name>
-    <LastName>eeee</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>300</Salary>
-    <Job>Prawnik</Job>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
+    <JobType>Umowa na czas okreśłony</JobType>
+  </Employee>
+  <Employee>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
+    <JobType>Umowa na czas okreśłony</JobType>
+  </Employee>
+  <Employee>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
+    <JobType>Umowa na czas okreśłony</JobType>
+  </Employee>
+  <Employee>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
+    <JobType>Umowa na czas okreśłony</JobType>
+  </Employee>
+  <Employee>
+    <Name>ee</Name>
+    <LastName>ee</LastName>
+    <Date>12.04.2023</Date>
+    <Salary>100</Salary>
+    <Job>Administrator</Job>
     <JobType>Umowa na czas okreśłony</JobType>
   </Employee>
   <Employee>
     <Name>dominik</Name>
-    <LastName>elo</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>400</Salary>
-    <Job>Prawnik</Job>
+    <LastName>szczepanik</LastName>
+    <Date>11.07.2001</Date>
+    <Salary>700</Salary>
+    <Job>Elektryk</Job>
+    <JobType>Umowa zlecenie</JobType>
   </Employee>
   <Employee>
     <Name>dominik</Name>
-    <LastName>elo</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>400</Salary>
-    <Job>Prawnik</Job>
+    <LastName>szczepanik</LastName>
+    <Date>11.07.2001</Date>
+    <Salary>700</Salary>
+    <Job>Elektryk</Job>
+    <JobType>Umowa zlecenie</JobType>
   </Employee>
   <Employee>
     <Name>dominik</Name>
-    <LastName>elo</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>400</Salary>
-    <Job>Prawnik</Job>
-  </Employee>
-  <Employee>
-    <Name>dominik</Name>
-    <LastName>elo</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>400</Salary>
-    <Job>Prawnik</Job>
-  </Employee>
-  <Employee>
-    <Name>dominik</Name>
-    <LastName>elo</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>400</Salary>
-    <Job>Prawnik</Job>
-  </Employee>
-  <Employee>
-    <Name>dominik</Name>
-    <LastName>elo</LastName>
-    <Date>05.04.2023</Date>
-    <Salary>400</Salary>
-    <Job>Prawnik</Job>
+    <LastName>szczepanik</LastName>
+    <Date>11.07.2001</Date>
+    <Salary>700</Salary>
+    <Job>Elektryk</Job>
+    <JobType>Umowa zlecenie</JobType>
   </Employee>
 </ArrayOfEmployee>

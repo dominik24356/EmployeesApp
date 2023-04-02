@@ -11,7 +11,7 @@ namespace EmployeeApp.Model
 {
     class MainModel
     {
-        private Employee _employee;
+        private EmployeeBuilder _employeeBuilder;
 
         private List<Employee> _employees = new List<Employee>();
 
@@ -21,11 +21,13 @@ namespace EmployeeApp.Model
 
 
 
-        public Employee Employee
+        public EmployeeBuilder EmployeeBuilder
         {
-            set { _employee = value; }
-            get { return _employee; }
+            set { _employeeBuilder = value; }
+            get { return _employeeBuilder; }
         }
+
+        
 
         public List<Employee> Employees
         {
@@ -35,7 +37,7 @@ namespace EmployeeApp.Model
 
         public MainModel()
         {
-            _employee = new Employee();
+            _employeeBuilder = new EmployeeBuilder();
         }
 
 
@@ -67,27 +69,33 @@ namespace EmployeeApp.Model
 
         public void DeserializeEmployees()
         {
-            List<Employee> emp = new List<Employee>();
-
-            //create the serialiser to read the xml
-            XmlSerializer serialiser = new XmlSerializer(typeof(List<Employee>));
-
-            // Create the TextReader for the serialiser to use
-            TextReader filestream = new StreamReader(xmlLocation);
-
-            //read the XML data
-            emp = (List<Employee>)serialiser.Deserialize(filestream);
-
-            //close the file
-            filestream.Close();
+            if (File.Exists(xmlLocation))
+            {
 
 
-            _employees = emp;
+                List<Employee> emp = new List<Employee>();
+
+                //create the serialiser to read the xml
+                XmlSerializer serialiser = new XmlSerializer(typeof(List<Employee>));
+
+                // Create the TextReader for the serialiser to use
+                TextReader filestream = new StreamReader(xmlLocation);
+
+                //read the XML data
+                emp = (List<Employee>)serialiser.Deserialize(filestream);
+
+                //close the file
+                filestream.Close();
+
+
+                _employees = emp;
+            }
         }
 
         public void addEmployee()
         {
-            _employees.Add(_employee);
+           
+            _employees.Add(_employeeBuilder.Build());
         }
 
         

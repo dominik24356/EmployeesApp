@@ -29,6 +29,7 @@ namespace EmployeeApp.View
         public event Action addEmployee;
         public event Action<String> getName;
         public event Action<String> getLastName;
+        public event Action<int> selectedEmployee;
 
 
         public TextBox GetNameBox()
@@ -54,6 +55,21 @@ namespace EmployeeApp.View
         public ComboBox GetJobBox()
         {
             return jobBox;
+        }
+
+        public RadioButton GetJobTypeBox1()
+        {
+            return jobTypeBox1;
+        }
+
+        public RadioButton GetJobTypeBox2()
+        {
+            return jobTypeBox2;
+        }
+
+        public RadioButton GetJobTypeBox3()
+        {
+            return jobTypeBox3;
         }
 
         public ListBox GetListBox()
@@ -119,7 +135,11 @@ namespace EmployeeApp.View
             getLastName?.Invoke(lastNameBox.Text);
             
         }
-        
 
+        private void selected_employee(object sender, EventArgs e)
+        {
+            var obj = sender as ListBox;
+            selectedEmployee?.Invoke(obj.SelectedIndex);
+        }
     }
 }

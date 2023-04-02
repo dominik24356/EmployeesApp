@@ -33,7 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.jobTypeBox3 = new System.Windows.Forms.RadioButton();
             this.jobTypeBox2 = new System.Windows.Forms.RadioButton();
-            this.jobTypeBox = new System.Windows.Forms.RadioButton();
+            this.jobTypeBox1 = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.jobBox = new System.Windows.Forms.ComboBox();
@@ -59,7 +59,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.jobTypeBox3);
             this.groupBox1.Controls.Add(this.jobTypeBox2);
-            this.groupBox1.Controls.Add(this.jobTypeBox);
+            this.groupBox1.Controls.Add(this.jobTypeBox1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.jobBox);
@@ -110,18 +110,16 @@
             this.jobTypeBox2.UseVisualStyleBackColor = true;
             this.jobTypeBox2.CheckedChanged += new System.EventHandler(this.get_jobType);
             // 
-            // jobTypeBox
+            // jobTypeBox1
             // 
-            this.jobTypeBox.AutoSize = true;
-            this.jobTypeBox.Checked = true;
-            this.jobTypeBox.Location = new System.Drawing.Point(123, 323);
-            this.jobTypeBox.Name = "jobTypeBox";
-            this.jobTypeBox.Size = new System.Drawing.Size(220, 24);
-            this.jobTypeBox.TabIndex = 12;
-            this.jobTypeBox.TabStop = true;
-            this.jobTypeBox.Text = "Umowa na czas nieokreślony";
-            this.jobTypeBox.UseVisualStyleBackColor = true;
-            this.jobTypeBox.CheckedChanged += new System.EventHandler(this.get_jobType);
+            this.jobTypeBox1.AutoSize = true;
+            this.jobTypeBox1.Location = new System.Drawing.Point(123, 323);
+            this.jobTypeBox1.Name = "jobTypeBox1";
+            this.jobTypeBox1.Size = new System.Drawing.Size(220, 24);
+            this.jobTypeBox1.TabIndex = 12;
+            this.jobTypeBox1.Text = "Umowa na czas nieokreślony";
+            this.jobTypeBox1.UseVisualStyleBackColor = true;
+            this.jobTypeBox1.CheckedChanged += new System.EventHandler(this.get_jobType);
             // 
             // label5
             // 
@@ -268,6 +266,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(724, 524);
             this.listBox1.TabIndex = 18;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.selected_employee);
             // 
             // errorProvider1
             // 
@@ -302,7 +301,7 @@
         private Button button1;
         private RadioButton jobTypeBox3;
         private RadioButton jobTypeBox2;
-        private RadioButton jobTypeBox;
+        private RadioButton jobTypeBox1;
         private Label label5;
         private Label label4;
         private ComboBox jobBox;

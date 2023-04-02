@@ -6,27 +6,40 @@ using System.Threading.Tasks;
 
 namespace EmployeeApp.Model
 {
-    [Serializable()]
+    [Serializable]
     public class Employee
     {
-        public string Name { get; set; } = null;
-        public string LastName { get; set; } = null;
-        public string Date { get; set; } = null;
-        public string Salary { get; set; } = null;
-        public string Job { get; set; } = null;
-        public string JobType { get; set; } = null;
+        public string Name { get; set; }
+        public string LastName { get; set; }
+        public string Date { get; set; }
+        public string Salary { get; set; }
+        public string Job { get; set; }
+        public string JobType { get; set; }
 
-        public Employee() { }
+        public Employee()
+        {
+            Name = "";
+            LastName = "";
+            Date = "";
+            Salary = "";
+            Job = "";
+            JobType = "";
+        }
 
-       
-        override
+        public Employee(string name, string lastName, string date, string salary, string job, string jobType)
+        {
+            Name = name;
+            LastName = lastName;
+            Date = date;
+            Salary = salary;
+            Job = job;
+            JobType = jobType;
+        }
+
         public String ToString()
         {
             return $"{Name}, {LastName}," +
                 $" {Date}, {Salary}, {Job}, {JobType}";
         }
-
-
-
     }
 }

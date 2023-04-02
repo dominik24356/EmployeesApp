@@ -26,12 +26,39 @@ namespace EmployeeApp.Presenter
             _view.loadEmployee += _view_loadEmployee;
             _view.getName += _view_getName;
             _view.getLastName += _view_getLastName;
+            _view.selectedEmployee += _view_selectedEmployee;
+
+        }
+
+        private void _view_selectedEmployee(int index)
+        {
+            Model.Employee selectedEmp = _model.Employees.ElementAt(index);
+            _view.GetNameBox().Text = selectedEmp.Name;
+            _view.GetLastNameBox().Text = selectedEmp.LastName;
+            _view.GetDateBox().Text = selectedEmp.Date;
+            _view.GetSalaryBox().Text = selectedEmp.Salary;
+            _view.GetJobBox().Text = selectedEmp.Job;
+
+            String selectedRadioBoxText = selectedEmp.JobType;
+
+            if (selectedRadioBoxText.Equals(_view.GetJobTypeBox1().Text))
+            {
+                _view.GetJobTypeBox1().Checked = true;
+            } else if (selectedRadioBoxText.Equals(_view.GetJobTypeBox2().Text))
+            {
+                _view.GetJobTypeBox2().Checked = true;
+            } else
+            {
+                _view.GetJobTypeBox3().Checked = true;
+            }
+            
+            
 
         }
 
         private void _view_getLastName(string lastName)
         {
-            _model.Employee.LastName = lastName;
+            _model.EmployeeBuilder.LastName = lastName;
             if (string.IsNullOrEmpty(lastName))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetLastNameBox());
@@ -45,7 +72,7 @@ namespace EmployeeApp.Presenter
 
         private void _view_getName(string name)
         {
-            _model.Employee.Name = name;
+            _model.EmployeeBuilder.Name = name;
             if (string.IsNullOrEmpty(name))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetNameBox());
@@ -59,12 +86,12 @@ namespace EmployeeApp.Presenter
 
         private void _view_getJobType(string jobType)
         {
-            _model.Employee.JobType = jobType;
+            _model.EmployeeBuilder.JobType = jobType;
         }
 
         private void _view_getJob(string job)
         {
-            _model.Employee.Job = job;
+            _model.EmployeeBuilder.Job = job;
 
             if (string.IsNullOrEmpty(job))
             {
@@ -80,7 +107,7 @@ namespace EmployeeApp.Presenter
         private void _view_getSalary(string salary)
         {
 
-            _model.Employee.Salary = salary;
+            _model.EmployeeBuilder.Salary = salary;
 
             if (string.IsNullOrEmpty(salary))
             {
@@ -97,7 +124,7 @@ namespace EmployeeApp.Presenter
         private void _view_getDob(string date)
         {
 
-            _model.Employee.Date = date;
+            _model.EmployeeBuilder.Date = date;
 
             if (string.IsNullOrEmpty(date))
             {
@@ -114,42 +141,48 @@ namespace EmployeeApp.Presenter
         private void _view_addEmployee()
         {
             bool isError = false;
-            if (String.IsNullOrEmpty(_model.Employee.Name) || _model.Employee.Name.Equals(""))
+            if (String.IsNullOrEmpty(_model.EmployeeBuilder.Name) || _model.EmployeeBuilder.Name.Equals(""))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetNameBox());
                 isError = true;
 
             }
 
-            if (String.IsNullOrEmpty(_model.Employee.LastName))
+            if (String.IsNullOrEmpty(_model.EmployeeBuilder.LastName))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetLastNameBox());
                 isError = true;
             }
 
-            if (String.IsNullOrEmpty(_model.Employee.Date))
+            if (String.IsNullOrEmpty(_model.EmployeeBuilder.Date))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetDateBox());
                 isError = true;
             }
 
-            if (_model.Employee.Salary is null || _model.Employee.Salary.Equals("0"))
+            if (_model.EmployeeBuilder.Salary is null || _model.EmployeeBuilder.Salary.Equals("0"))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetSalaryBox());
                 isError = true;
             }
 
-            if (String.IsNullOrEmpty(_model.Employee.Job))
+            if (String.IsNullOrEmpty(_model.EmployeeBuilder.Job))
             {
                 _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetJobBox());
                 isError = true;
             }
 
-            
+            if (String.IsNullOrEmpty(_model.EmployeeBuilder.JobType))
+            {
+                _view.SetErrorProviderOnField("Pole nie może być puste !", _view.GetJobTypeBox1());
+                isError = true;
+            }
+
+
 
             if (!isError)
             {
-                _view.GetListBox().Items.Add(_model.Employee.ToString());
+                _view.GetListBox().Items.Add(_model.EmployeeBuilder.ToString());
                 _model.addEmployee();
                 
             }
